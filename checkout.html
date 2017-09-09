@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link href="css/checkout.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet">
+		<script type="text/javascript" src="javascript/mascara.js"></script> 
+		<script type="text/javascript" src="javascript/validar.js"></script> 
+		<script type="text/javascript" src="javascript/javascript.js"></script>
+		<script type="text/javascript" src="javascript/cidades-estados-1.4-utf8.js"></script> 
+		<title>Checkout - Nova Opção</title>
+	</head>
+	<body>
+		<div id="pai">
+			<div id="checkout1">
+				<div id='logo'>
+					<a class="logo-part1">NOVA OPÇÃO</a><br>
+					<a class="logo-part2">--- BRASIL ---</a>
+				</div>
+				<div id="checkoutForm">
+					<form action="frete.php" method="post" name="form1" onsubmit="return validaCpf()">
+						<label>E-mail</label><br><br>
+						<input class='campo100' type="email" name="email" required/><br><br>
+						<label>Endereço</label><br><br>
+						<input class='campo50' type="text" placeholder="Primeiro nome" name="nome" required />
+						<input class='campo50' type="text" placeholder="Segundo nome" name="sobrenome" required />
+						<input class='campo100' type="text" placeholder="Rua" name="rua" required />
+						<input class='campo50' type="text" placeholder="Número" name="numero" required />
+						<input class='campo50' type="text" placeholder="Bairro" name="bairro" required />
+						<select id="estado1" name="estado" value="" required></select>
+						<select id="cidade1" name="cidade" value="" required></select>
+						<input class='campo33' type="text" name="cep" onkeypress="MascaraCep(form1.cep)" placeholder="CEP" maxlength="10" required />
+						<input class='campo33' type="text" onkeypress="MascaraTelefone(form1.telefone)" placeholder="Telefone" name="telefone" maxlength="15" required />
+						<input class='campo33' type="text" onkeypress="MascaraCPF(form1.cpf)" placeholder="CPF" name="cpf" maxlength="14" required />
+						<div id="continuar">
+							<input type="submit" value="CONTINUAR"/>
+						</div>
+					</form>
+				</div>
+				<hr></hr>
+				<div id="rodape">
+					<a>Copyright 2017</a>
+				</div>
+			</div>
+			<div id="checkout2">
+				<div id="produtos">
+					<!-- BEGIN BLOCK_PRODUTOCARRINHO -->
+					<div id="produtoCarrinho">
+						<div id="imagemProduto">
+							<span id="img"><img width="58px" height="76px" src="imagens/{IMAGEM}"/></span>
+							<span id="imgQt"><a>{QT}</a></span>
+						</div>
+						<div id="nomeProduto">
+							<a>{NOME}</a>
+						</div>
+						<div id="precoProduto">
+						R$ {TOTALDOPRODUTO}
+						</div>
+					</div>
+					<!-- END BLOCK_PRODUTOCARRINHO -->
+				</div>
+				<div id="desconto">
+					<form action="desconto.php" method="post" name="desconto">
+						<input type="text" placeholder="Desconto" name="desconto"/>
+						<input type="submit" value="Aplicar"/>
+					</form>
+				</div>
+				<div id="subtotal-frete">
+					<span id="sub1">
+						<a>Subtotal</a><br>
+						<a>Frete</a>
+					</span>
+					<span id="sub2">
+						<a>R$ {TOTALVALORES}</a><br>
+						<a>A calcular</a>
+					</span>
+				</div>
+				<div id="total">
+					<span id="sub1">
+						<a>Total</a>
+					</span>
+					<span id="sub2">
+						<a>R$ {TOTALVALORES}</a>
+					</span>
+				</div>
+			</div>
+		</div> 
+	</body>
+	<script language="JavaScript" type="text/javascript" charset="utf-8">
+      new dgCidadesEstados({
+        cidade: document.getElementById('cidade1'),
+        estado: document.getElementById('estado1')
+      })
+    </script>
+</html>

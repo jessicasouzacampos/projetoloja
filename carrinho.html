@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Produtos - Nova Opção</title>
+		<link href="css/estilos.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet">
+		<script type="text/javascript" src="javascript/javascript.js"></script>
+		<script src='elevatezoom-master/jquery-1.8.3.min.js'></script>
+		<script src='elevatezoom-master/jquery.elevatezoom.js'></script>
+	</head>
+	<body>
+		<div id="pai">
+			<div id="cabecalho">
+				<div id="logo">
+					<a class="logo-part1">NOVA OPÇÃO</a><br>
+					<a class="logo-part2">--- BRASIL ---</a>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="produtos.php">PRODUTOS</a></li>
+						<li><a href="sobrenos.php">SOBRE NÓS</a></li>
+						<li><a href="contato.php">CONTATO</a></li>
+						<li><a href="carrinho.php"><img src="imagens/carrinho.jpg"/></a></li>
+						<li><a href="carrinho.php">{QTCARRINHO}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="pesquisa">
+				<form action="produtos.php" name="pesquisa" method="post" onsubmit="return pesquisar();">
+					<input type="text" id="campoPesquisa" name="pesquisa" placeholder="O que você está procurando ?"/>
+					<input class="buttonSubmit" type="submit" value="PESQUISAR"/>
+				</form>
+			</div>
+			<div id="conteudo">
+				<div id="subtitle">
+					<a style="font-size:25px;">Seu carrinho</a><br><a>_____</a>
+				</div>
+				<div id="carrinho">
+					<!-- BEGIN BLOCK_CARTEMPTY -->
+					<div id="carrinhoVazio">
+						<a>Seu carrinho está vazio.</a><br><br><br>
+						<a href="produtos.php" id="irPagProdutos">Ir para a página de produtos</a>
+					</div>
+					<!-- END BLOCK_CARTEMPTY -->
+					<!-- BEGIN BLOCK_CARTNOTEMPTY -->
+					<table cellspacing="0px">
+						<tr>
+							<th></th>
+							<th></th>
+							<th>QUANTIDADE</th>
+							<th>TOTAL</th>
+						</tr>
+						<!-- BEGIN BLOCK_PRODUTOCARRINHO -->
+						<tr>						
+							<td><img width="144px" height="192px" src="imagens/{IMAGEM}"/></td>
+							<td><em>{NOME}</em><br><a onclick="return confirmation();" href="deleteProdutoCarrinho.php?id={ID}" style="font-size:14px;font-family:Old Standard TT;">Remover</a></td>
+							<td><center>
+								<form action="checkout.php" id="quantidade" name="raiva" method="post">
+									<a id="menos" href="campoQuantidade.php?id={ID}&botao=menos">-</a>
+									<input type="text" value="{QUANTIDADE}" id="{ID}" class="campoQt" name="qt"/>
+									<a id="mais" href="campoQuantidade.php?id={ID}&botao=mais">+</a>
+								
+							</center></td>
+							<td><center>R$ {TOTAL_PRODUTO}</center></td>
+						</tr>
+						<!-- END BLOCK_PRODUTOCARRINHO -->
+						<tr id="subtotal">
+							<td></td>
+							<td></td>
+							<td>SUBTOTAL</td>
+							<td>R$ {SUBTOTAL}</td>
+						</tr>
+					</table>
+					<div id="checkout">
+						<a>Frete, impostos e descontos calculados no checkout.</a><br>
+						<input type="submit" style="background:#1C1D1D" name="finalizar" value="FINALIZAR COMPRA"><br>
+						</form>
+					</div>
+					<!-- END BLOCK_CARTNOTEMPTY -->
+				</div>
+			</div>
+				<div id="rodape">
+				<a>_____</a><br>
+				<ul>
+					<li><a href="#">Procurar</a></li>
+					<li><a href="#">Sobre nós</a></li>
+					<li><a href="#">Contate - nos</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Termos e condições</a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+				<table>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Facebook</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Twitter</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/instagram_p.jpg"/></td><td align="left">Instagram</td></a></tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script>
+		$("#zoom_05").elevateZoom({
+		  zoomType				: "lens",
+		  lensShape : "round",
+		  lensSize    : 200
+		}); 
+	</script>
+</html>

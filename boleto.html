@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link href="css/checkout.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet"> 
+		<script type="text/javascript" src="javascript/validar.js"></script> 
+		<script type="text/javascript" src="javascript/javascript.js"></script>
+		<title>Checkout - Nova Opção</title>
+	</head>
+	<body>
+		<div id="pai">
+			<div id="checkout1">
+				<div id='logo'>
+					<a class="logo-part1">NOVA OPÇÃO</a><br>
+					<a class="logo-part2">--- BRASIL ---</a>
+				</div>
+				<div id="checkoutForm">
+					<div id="boletoPagamento">
+						<a href="pagseguro-direct-payment-master/boleto.php">FINALIZAR COMPRA E GERAR BOLETO</a><br>
+						<img src="imagens/boleto.png" width='128px' height='128px'/>
+					</div>
+				</div>
+				<hr></hr>
+				<div id="rodape">
+					<a>Copyright 2017</a>
+				</div>
+			</div>
+			<div id="checkout2">
+				<div id="produtos">
+					<!-- BEGIN BLOCK_PRODUTOCARRINHO -->
+					<div id="produtoCarrinho">
+						<div id="imagemProduto">
+							<span id="img"><img width="58px" height="76px" src="imagens/{IMAGEM}"/></span>
+							<span id="imgQt"><a>{QT}</a></span>
+						</div>
+						<div id="nomeProduto">
+							<a>{NOME}</a>
+						</div>
+						<div id="precoProduto">
+						R$ {TOTALDOPRODUTO}
+						</div>
+					</div>
+					<!-- END BLOCK_PRODUTOCARRINHO -->
+				</div>
+				<div id="desconto">
+					<form action="desconto.php" method="post" name="desconto">
+						<input type="text" placeholder="Desconto" name="desconto"/>
+						<input type="submit" value="Aplicar"/>
+					</form>
+				</div>
+				<div id="subtotal-frete">
+					<span id="sub1">
+						<a>Subtotal</a><br>
+						<a>Frete</a>
+					</span>
+					<span id="sub2">
+						<a>R$ {TOTALVALORES}</a><br>
+						<a>{FRETETOTAL}</a>
+					</span>
+				</div>
+				<div id="total">
+					<span id="sub1">
+						<a>Total</a>
+					</span>
+					<span id="sub2">
+						<a>R$ {TOTALFINAL}</a>
+					</span>
+				</div>
+			</div>
+		</div> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
+	</body>
+</html>

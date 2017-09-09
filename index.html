@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link href="css/estilos.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet">
+		<script type="text/javascript" src="javascript/javascript.js"></script>
+		<title>Home - Nova Opção</title>
+	</head>
+	<body>
+		<div id="pai">
+			<div id="cabecalho">
+				<div id="logo">
+					<a class="logo-part1">NOVA OPÇÃO</a><br>
+					<a class="logo-part2">--- BRASIL ---</a>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="produtos.php">PRODUTOS</a></li>
+						<li><a href="sobrenos.php">SOBRE NÓS</a></li>
+						<li><a href="contato.php">CONTATO</a></li>
+						<li><a href="carrinho.php"><img src="imagens/carrinho.jpg"/></a></li>
+						<li><a href="carrinho.php">{QTCARRINHO}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="pesquisa">
+				<form action="produtos.php" name="pesquisa" method="post" onsubmit="return pesquisar();">
+					<input type="text" id="campoPesquisa" name="pesquisa" placeholder="O que você está procurando ?"/>
+					<input class="buttonSubmit" type="submit" value="PESQUISAR"/>
+				</form>
+			</div>
+			<div id="conteudo">
+				<div id="subtitle">
+					<a style="font-size:25px;">Lançamentos</a><br><a>_____</a>
+				</div>
+				<div id="catalogo">
+					<div id="imagensCatalogo">
+						<a href="produtos.php?categoria=moletons"><div id="img3"><em>Moletons</em></div></a>
+						<a href="produtos.php?categoria=brincos"><div id="img2"><em>Brincos</em></div></a>
+						<a href="produtos.php?categoria=camisas"><div id="img1"><em>Camisas</em></div></a>
+						<a href="produtos.php?categoria=bolsas"><div id="img4"><em>Bolsas</em></div></a>
+					</div>
+				</div>
+			</div>
+			<div id="rodape">
+				<a>_____</a><br><br><br>
+				<ul>
+					<li><a href="#">Procurar</a></li>
+					<li><a href="#">Sobre nós</a></li>
+					<li><a href="#">Contate - nos</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Termos e condições</a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+				<table>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Facebook</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Twitter</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/instagram_p.jpg"/></td><td align="left">Instagram</td></a></tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

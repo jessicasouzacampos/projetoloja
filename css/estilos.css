@@ -1,0 +1,330 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+#pai{
+	width:80%;
+	font-family:Montserrat;
+	margin:0 auto;
+	display:table;
+}
+#cabecalho{
+	width:100%;
+	margin:0 auto;
+	height:100px;
+	display:table;
+}
+#logo{
+	width:30%;
+	float:left;
+	text-align:center;
+	height:75px;
+	padding:12.5px 0px;
+}
+.logo-part1{
+	font-size:35px;
+}
+.logo-part2{
+	font-size:20px;
+}
+#menu{
+	width:70%;
+	float:left;
+	font-size:15px;
+	height:30px;
+	padding:35px 0px;
+}
+#menu ul{
+	list-style:none;
+	width:600px;
+	margin:0 auto;
+}
+#menu ul li{
+	float:left;
+	text-align:center;
+	margin-right:10px;
+	width:90px;
+}
+#menu ul li a{
+	text-decoration:none;
+	color:black;
+}
+#menu ul li:hover a{
+	text-decoration:underline;
+}
+#conteudo{
+	clear:both;
+	width:100%;
+	padding:100px 0px;
+}
+#pesquisa{
+	width:100%;
+	height:60px;
+	clear:both;
+	text-align:center;
+	padding:40px 0px;
+}
+#pesquisa form{
+	background:white;
+}
+#pesquisa form input[type="text"]{
+	width:295px;
+	outline:none;
+	padding-left:5px;
+	height:47px;
+	font-family:Arapey;
+	border:1px solid;
+	font-style:italic;
+	font-size:20px;
+}
+#pesquisa form input[type="submit"]{
+	width:150px;
+	outline:none;
+	height:47px;
+	font-family:Montserrat;
+	font-size:15px;
+	border:none;
+	background:black;
+	color:white;
+	opacity:1.0;
+}
+#pesquisa form input[type="submit"]:hover{
+	opacity:0.7;
+	transition:1s;
+	cursor:pointer;
+}
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+}
+#rodape{
+	width:100%;
+	height:150px;
+	clear:both;
+	text-align:center;
+	font-family:Old Standard TT;
+}
+#rodape ul, #rodape table{
+	width:33%;
+	float:left;
+	list-style:none;
+	font-size:14px;
+	padding:40px 0px;
+}
+#rodape ul li a{
+	text-decoration:none;
+	color:black;
+}
+#catalogo{
+	width:100%;
+	font-family:Old Standard TT;
+}
+#imagensCatalogo div{
+	width:46%;
+	margin:2%;
+	height:180px;
+	float:left;
+	font-size:30px;
+	color:#FBF9F9;
+	opacity:1.0;
+	text-align:center;
+	padding-top:140px;
+}
+#imagensCatalogo div:hover{
+	opacity:0.7;
+	transition:1s;
+	cursor:pointer;
+}
+#catalogTitle{
+	text-align:center;
+	padding:20px 0px;
+}
+#img1{
+	background-image:url('../imagens/img1.jpg');
+}
+#img2{
+	background-image:url('../imagens/img2.jpg');
+}
+#img3{
+	background-image:url('../imagens/img3.jpg');
+}
+#img4{
+	background-image:url('../imagens/img4.jpg');
+}
+#produto{
+	width:32%;
+	padding:20px 0px;
+	margin-right:1.3%;
+	height:510px;
+	float:left;
+}
+#produtos{
+	text-align:center;
+	display:table;
+	width:100%;
+}
+#subtitle{
+	width:100%;
+	text-align:center;
+	font-family:Old Standard TT;
+	padding:0px 0px 50px 0px;
+}
+#nadaEncontrado{
+	text-align:center;
+	padding:30px 0px;
+	width:100%;
+}
+#produto img{
+	width:100%;
+}
+#imgProduto{
+	width:100%;
+}
+#dtProduto{
+	text-align:center;
+	font-size:15px;
+	padding:10px 0px;
+}
+#dtProduto a{
+	text-decoration:none;
+	color:black;
+}
+#sobrenos{
+	width:50%;
+	margin:0 auto;
+	font-family:Old Standard TT;
+	text-align:center;
+}
+#contato{
+	width:50%;
+	margin:0 auto;
+	font-family:Old Standard TT;
+	text-align:center;
+}
+#detalhesProduto{
+	width:100%;
+	display:table;
+}
+#imagemZoom{
+	width:450px;
+	height:600px;
+	text-align:center;
+	float:left;
+}
+#imagemDescricao{
+	width:calc(100% - 490px);
+	height:400px;
+	float:left;
+	font-family:Old Standard TT;
+	padding:100px 20px;
+}
+#descricao{
+	text-align:center;
+}
+#texto{
+	padding:100px 0px;
+}
+#botaoAddCarrinho{
+	padding:15px;
+	background:#1C1D1D;
+	font-family:Montserrat;
+	color:#FFF;
+	outline:none;
+	border:none;
+	opacity:1.0;
+}
+#botaoAddCarrinho:hover{
+	opacity:0.8;
+	transition:0.5s;
+	cursor:pointer;
+}
+#carrinho{
+	width:100%;
+}
+#carrinho table{
+	margin:0 auto;
+}
+#carrinho table tr, #carrinho table td, #carrinho table th{
+	font-weight:lighter;
+	padding:30px;
+	border-bottom: 1px solid black;
+}
+#carrinho table tr td a{
+	text-decoration:none;
+	color:black;
+}
+#carrinho table tr td a:hover{
+	color:red;
+}
+.campoQt{
+	width:60px;
+	height:40px;
+	margin:-5px;
+	border:none;
+	outline:none;
+	text-align:center;
+}
+#mais,#menos{
+	color:black;
+	font-size:15px;
+	font-family:Arial;
+	outline:none;
+}
+#mais:hover,#menos:hover{
+	cursor:pointer;
+}
+#subtotal,#subtotal td{
+	border:none !important;
+}
+#checkout{
+	width:50%;
+	text-align:center;
+	margin-left:50%;
+}
+#checkout a{
+	font-family:
+	
+}
+#checkout input[type="submit"]{
+	margin-top:10px;
+	font-family:Montserrat;
+	color:white;
+	border:none;
+	padding:15px 0px;
+	width:180px;
+	opacity:1.0;
+}
+#checkout input[type="submit"]:hover{
+	cursor:pointer;
+	opacity:0.8;
+	transition:1s;
+}
+#carrinhoVazio{
+	width:100%;
+	text-align:center;
+	font-family:Old Standard TT;
+	font-size:14px;
+}
+#irPagProdutos{
+	width:80px;
+	padding:20px;
+	background:#1C1D1D;
+	opacity:1.0;
+	color:white;
+	text-decoration:none;
+}
+#irPagProdutos:hover{
+	opacity:0.8;
+	transition:1s;
+}

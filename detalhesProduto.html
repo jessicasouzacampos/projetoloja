@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Produtos - Nova Opção</title>
+		<link href="css/estilos.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet">
+		<script type="text/javascript" src="javascript/javascript.js"></script>
+		<script src='elevatezoom-master/jquery-1.8.3.min.js'></script>
+		<script src='elevatezoom-master/jquery.elevatezoom.js'></script>
+	</head>
+	<body>
+		<div id="pai">
+			<div id="cabecalho">
+				<div id="logo">
+					<a class="logo-part1">NOVA OPÇÃO</a><br>
+					<a class="logo-part2">--- BRASIL ---</a>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="produtos.php">PRODUTOS</a></li>
+						<li><a href="sobrenos.php">SOBRE NÓS</a></li>
+						<li><a href="contato.php">CONTATO</a></li>
+						<li><a href="carrinho.php"><img src="imagens/carrinho.jpg"/></a></li>
+						<li><a href="carrinho.php">{QTCARRINHO}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="pesquisa">
+				<form action="produtos.php" name="pesquisa" method="post" onsubmit="return pesquisar();">
+					<input type="text" id="campoPesquisa" name="pesquisa" placeholder="O que você está procurando ?"/>
+					<input class="buttonSubmit" type="submit" value="PESQUISAR"/>
+				</form>
+			</div>
+			<div id="conteudo">
+				<div id="detalhesProduto">
+					<div id="imagemZoom">
+						<a style="font-size:12px;font-family:Montserrat;">PASSE O MOUSE PARA VER COM ZOOM</a>
+						<img id="zoom_05" src="imagens/{IMAGEM}" data-zoom-image="imagens/{IMAGEMZOOM}"/>
+					</div>
+					<div id="imagemDescricao">
+						<div id="descricao">
+							<a style="font-size:35px">{NOME}</a><br><br>
+							<a style="font-family:Montserrat;font-size:20px">R$ {PRECO}</a><br>
+							<a>_____</a><br><br>
+							<form action="addProdutoCarrinho.php" name="carrinho" method="post">
+								<input type="hidden" name="id" value="{ID}"/>
+								<input type="hidden" name="nome" value="{NOME}"/>
+								<input type="hidden" name="preco" value="{PRECO}"/>
+								<input type="hidden" name="imagem" value="{IMAGEM}"/>
+								<input type="submit" id="botaoAddCarrinho" value="ADICIONAR AO CARRINHO"/>
+							</form>
+						</div>
+						<div id="texto">
+							<p>We all need this bag in our lives - Cross-body bag with detachable strap, made from Italian Leather.  
+							Perfect for 'day to evening' chic. Bag measures 30 x 21cm. Fully lined with beige cotton lining.  
+							2 inside pockets including zipped pocket. This bag has been designed to fit your life - use as an airport bag when travelling, 
+							or as an everyday bag for when running errands. Why not accessorise your bag with one of our leather key rings?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div id="rodape">
+				<a>_____</a><br>
+				<ul>
+					<li><a href="#">Procurar</a></li>
+					<li><a href="#">Sobre nós</a></li>
+					<li><a href="#">Contate - nos</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Termos e condições</a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+				<table>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Facebook</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/facebook_p.jpg"/></td><td align="left">Twitter</td></a></tr>
+					<tr><td align="right"><a href="#"><img src="imagens/instagram_p.jpg"/></td><td align="left">Instagram</td></a></tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script>
+		$("#zoom_05").elevateZoom({
+		  zoomType				: "lens",
+		  lensShape : "round",
+		  lensSize    : 200
+		}); 
+	</script>
+</html>
