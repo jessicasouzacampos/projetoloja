@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$idProduto = $_POST['id'];
+	$idProduto2 = $_POST['id'];
 	$nomeProduto = $_POST['nome'];
 	$precoProduto = (double) $_POST['preco'];
 	$imagemProduto = $_POST['imagem'];
