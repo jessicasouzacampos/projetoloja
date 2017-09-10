@@ -1,3 +1,7 @@
 <?php
-	echo $_POST["nome"];
+
+// Mostra todas as informações, usa o padrão INFO_ALL
+phpinfo();
+
+
 ?>
